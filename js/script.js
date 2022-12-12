@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let poster = filmData.poster
             let runtime = "Runtime : " + filmData.runtime + " Minutes"
             let showtime = "Showtime : " + filmData.showtime
-            // let soldTicks = "Tickets Sold : " + filmData.tickets_sold
-            // let capacity = "Capacity : " + filmData.capacity
-            // let remTicks = "Remaining Tickets : " + filmData.remTickets
+            let soldTicks = "Tickets Sold : " + filmData.tickets_sold
+            let capacity = "Capacity : " + filmData.capacity
+            let remTicks = "Remaining Tickets : " + filmData.remTickets
 
             let filmElement = createFilm(poster, title, runtime, showtime)
             FilmRow.appendChild(filmElement)
@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     FilmRow.append(...titleElems)
                 })
         
+                
     }
 
    loadFilm()
