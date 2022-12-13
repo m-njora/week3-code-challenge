@@ -160,7 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // tickets available would be film.capacity string minus film.tickets_sold
             let capacityConvert = parseInt(film.capacity, 10)
             ticketRem.textContent = "Remaining Tickets: " + (capacityConvert - film.tickets_sold)
-
+            //let btn = document.getElementById("book")
+            //btn.textContent = `BUY A TICKET`
+            //btn.addEventListener('click', () => {
+            //ticketRem.textContent   -=1
+            //btn.textContent = `BUY A TICKET`})
             // let btn = document.getElementById("remaining")
             // btn.addEventListener('click', () => {
             //     if(ticketRem.textContent <= 0){
