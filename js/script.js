@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/films"
+let url = "https://m-njora.github.io/week3-code-challenge/db.json"
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
-            let filmData = data[0]
+            let filmData = data.films[0]
             // console.log(filmData);
             let title = "Film Title : " + filmData.title
             let poster = filmData.poster
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(url)
             .then(res => res.json())
             .then(data => {
-                data.forEach(film => {
+                data.films.forEach(film => {
                     // console.log(film);
                     displayAllFilms(film)
                     // getOneFilm(film)
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
-                    let titleNames = data
+                    let titleNames = data.films
                     let titleElems = titleNames.map(
                         filmss => displayAllFilms(filmss.title)
                     )
